@@ -3,7 +3,8 @@
   "name": "vestyr",
   "main": "./worker/index.ts",
   "compatibility_date": "2026-09-12",
-  "compatibility_flags": ["nodejs_compat"],
+  // No compatibility_flags: the Worker uses only Web APIs (fetch, crypto,
+  // TextEncoder, btoa) plus cloudflare:email, so nodejs_compat is not needed.
   "observability": {
     "enabled": true
   },
