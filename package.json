@@ -1,0 +1,21 @@
+{
+  "name": "vestyr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vestyr — independent B2B brand & marketing. Static site on Cloudflare Workers Static Assets, with a Worker API for the contact form.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev",
+    "preview": "npm run build && wrangler dev --remote",
+    "typecheck": "tsc --noEmit",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.101.0"
+  }
+}

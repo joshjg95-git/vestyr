@@ -1,0 +1,79 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 11500,
+      "title": "Vestyr — desktop",
+      "expand": "fill",
+      "is_interactive": true
+    },
+    {
+      "file": "Mobile.dc.html",
+      "x": 1640,
+      "y": 0,
+      "w": 390,
+      "h": 16400,
+      "title": "Vestyr — mobile",
+      "expand": "fit",
+      "is_interactive": true
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-portrait",
+      "x": -420,
+      "y": 760,
+      "w": 320,
+      "text": "PORTRAIT — to be supplied.\n\nThe 4:5 block in \"How I see it\" is a marked placeholder with a dithered frame. Drop the real photograph in and the layout holds.\n\nOn mobile it sits directly after the section headline, before the body copy, as the brief specifies."
+    },
+    {
+      "id": "note-contact",
+      "x": -420,
+      "y": 7600,
+      "w": 320,
+      "text": "CONTACT FORM — designed, not wired.\n\nThe form is complete and keyboard-accessible but inert, and says so on the page. It needs an enquiry destination before launch.\n\n[BUSINESS EMAIL] still needs filling in — it appears in the contact section and the footer."
+    },
+    {
+      "id": "note-diagnostic",
+      "x": -420,
+      "y": 3100,
+      "w": 320,
+      "text": "FIND YOUR NORTH — working, not a mockup. Start it and answer all twelve; the scoring, the weakest-dimension logic and the tie-break all run.\n\nQuestion wording and scoring sit in a data array at the top of the logic block, separate from the rendering, so copy can be edited without touching layout.\n\nNo analytics events: the site has no analytics, and the brief says not to add a provider for this alone. Progress is not kept across a refresh — deliberate, so the canvas never reopens mid-quiz."
+    },
+    {
+      "id": "note-work",
+      "x": -420,
+      "y": 5000,
+      "w": 320,
+      "text": "SELECTED WORK — five accordions built on native details/summary, so they are keyboard-accessible and expose their state. FLAVORIQ is open by default; the others open independently.\n\nEach panel carries a specifically labelled asset slot rather than stand-in imagery."
+    },
+    {
+      "id": "note-newcopy",
+      "x": -420,
+      "y": 1600,
+      "w": 320,
+      "text": "NEW COPY — needs your voice check.\n\nThe point-of-view section and the \"Where this helps\" lists under each service are drafted, not from the brief. They are built from positions the brief already takes, and framed as situations rather than failings, per the rule about not calling clients confused or behind.\n\nThe hero intro is compressed from the brief's own hero copy, with the \"I'm Josh\" opener removed."
+    },
+    {
+      "id": "note-accent",
+      "x": 2120,
+      "y": 0,
+      "w": 320,
+      "text": "GREEN CARRIES THE CTAs.\n\nLichen #CCCB78 with dark ink on top — 8.6:1. White on this green fails AA, which is why the buttons are dark-on-green rather than the other way round.\n\nGreen also marks the service numbers and the \"Let's talk\" nav item. Everything else stays glacier."
+    },
+    {
+      "id": "note-dither",
+      "x": 2120,
+      "y": 560,
+      "w": 320,
+      "text": "ANIMATED DITHER in three places only: the bottom edge of the hero, where the pale page pixellates up into the dark image; the top edge of the contact block; and the portrait frame.\n\nOrdered Bayer 8×8 on a 4px grid, drifting at ~14fps. It holds still for anyone with reduced-motion set, and the Motion tweak switches it off."
+    }
+  ],
+  "launch": {
+    "view": "focused",
+    "file": "Main.dc.html"
+  }
+}

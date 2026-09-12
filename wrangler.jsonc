@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "vestyr",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-09-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+
+  // Static Assets. The site is plain HTML with real file paths, so the default
+  // 404 handling is correct — it is not a single-page application, and
+  // "not_found_handling": "single-page-application" is deliberately not set.
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // Only /api/* reaches the Worker; every other request is served straight
+    // from the asset store without invoking Worker code.
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Cloudflare Email — the destination address must be verified in
+  // Email Routing before sending will succeed.
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL"
+    }
+  ],
+
+  // Non-secret configuration. Secrets (TURNSTILE_SECRET_KEY) are set with
+  // `wrangler secret put` or in the dashboard — never in this file.
+  "vars": {
+    "CONTACT_SENDER": "website@vestyr.com"
+  }
+}
